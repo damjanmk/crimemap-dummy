@@ -1,0 +1,145 @@
+.kopchninja{
+    padding: 5px 0 5px 0;
+    float:left;
+    width: 960px;
+    text-align: center;
+}
+#tabela
+{
+	background: #fff;
+	width: 943px;
+	border-collapse: collapse;
+	text-align: left;
+}
+#tabela tr{
+    border-bottom: 1px solid #6678b1;
+}
+#tabela td
+{
+	padding: 3px 0 3px 0;
+}
+#tabela tbody tr:hover td
+{
+	color: royalblue;
+        font-weight: bold;
+        cursor: pointer;
+}
+#naslovi a
+{
+    display: block;
+    font-size: 15px;
+    font-weight: normal;
+    border-bottom: 2px solid #6678b1;
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    color: #666666;
+}
+#naslovi a:hover{
+    color: black;
+    font-weight: bold;
+}
+#id{
+    width: 55px;
+}
+#tip{
+    padding: 0 1px 0 1px;
+}
+#grad{
+    width: 80px;
+}
+#adresa{
+    width: 140px;
+    padding-right: 45px;
+}
+#datum_bilten, #datum{
+    padding-left: 12px;
+    width: 100px;
+}
+#lat, #lng{
+    width: 90px;
+}
+#opis{
+    width: 211px;
+}
+div.scroll {
+    float: left;
+    height: 540px;
+    width: 960px;
+    overflow: auto;
+    border: 1px solid #666;
+    background-color: #ccc;
+    padding: 0;
+}
+.id{
+    width: 3em;
+    padding-left: 1em;
+}
+.shto{
+    width:1em;
+}
+.grad{
+    width:6em;
+    padding-left: 1.1em;
+}
+.datum{
+    width:6em;
+    padding-left: 0.9em;
+}
+.lat{
+    width:5em;
+    padding-left: 0.4em;
+}
+.lng{
+    width:5em;
+    padding-left: 1em;
+}
+.opis{
+    width: auto;
+}
+.str{
+    padding: 5px 0 5px 0;
+    float:left;
+    width: 960px;
+}
+.str div{
+    text-align: center;
+}
+.str a{
+    text-decoration: none;
+    color: black;
+    margin: 3px;
+    padding: 2px 2px 2px 3px;
+    border: solid 1px #666;
+}
+.str a:hover{
+    background-color: white;
+}
+.str a.tekovna{
+    color: white;
+    background-color: black;
+}
+.str a.tekovna:hover{
+    color: black;
+    background-color: white;
+}
+.str a.ne_moze{
+    color: white;
+}
+.str a.ne_moze:hover{
+    color: white;
+    background: none;
+}
+tr.select_red{
+    color: royalblue;
+    background-color: darkgray;
+    font-weight: bold;
+}
+#dialog-brishi, #dialog-formular{
+    display: none;
+    font-size: 14px;
+    padding-bottom: 34px;
+}
+#formular input, textarea{
+    width: 250px;
+}

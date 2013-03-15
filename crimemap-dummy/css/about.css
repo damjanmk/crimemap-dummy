@@ -1,0 +1,39 @@
+body{
+    height: 100%;
+    margin:0 auto;
+    width: 960px;
+    background-image: url('../img/finki_back.jpg');
+    color: #666666;
+    font: 12px/16px Calibri,Arial,Tahoma,Helvetica,sans-serif;
+}
+.text a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+.text a:visited{
+    color: black;
+}
+.text a:hover{
+    text-decoration: underline;
+}
+.middle{
+    background-image: url('../img/inner-type-two-middle-bg.png');
+    width: 100%;
+    float: left;
+}
+.top{
+    background-image: url('../img/inner-type-two-top-bg.png');
+    height: 23px;
+    width: 100%;
+    float: left;
+}
+.bottom{
+    background-image: url('../img/inner-type-two-bottom-bg.png');
+    height: 23px;
+    width: 100%;
+    float: left;
+}
+.text{
+    margin: 0px 15px 0px 15px;
+}

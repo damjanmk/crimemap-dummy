@@ -1,0 +1,120 @@
+body{
+    height: 100%;
+    margin:0 auto;
+    width: 960px;
+    background-image: url('../img/finki_back.jpg');
+    background-repeat: repeat-x;
+    color: #666666;
+    font: 12px/16px Calibri,Arial,Tahoma,Helvetica,sans-serif;
+}
+.middle{
+    background-image: url('../img/inner-type-two-middle-bg.png');
+    width: 100%;
+    float: left;
+}
+.top{
+    background-image: url('../img/inner-type-two-top-bg.png');
+    height: 23px;
+    width: 100%;
+    float: left;
+}
+.bottom{
+    background-image: url('../img/inner-type-two-bottom-bg.png');
+    height: 23px;
+    width: 100%;
+    float: left;
+}
+#map_canvas{
+    width: 915px;
+    height: 600px;
+    margin: 10px 40px 1px 20px;
+}
+.feedback{
+    margin: 0px 1px;
+}
+#feedback{
+    width: 100%;
+    text-align: center;
+}
+.marker{
+    display: inline;
+    padding: 2px 10px;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px black solid;
+}
+.marker:hover{
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+#marker_div{
+    text-align: center;
+    margin: 10px 0px;
+}
+.znak{
+	float: left;
+	padding: 10px 5px 0px 5px;
+}
+#znaci_opis{
+	margin: 0 auto;
+	width: 66%;	
+}
+.znak_opis{
+	float: left;
+	padding: 5px 5px;
+}
+.znak_img{
+	float: left;
+}
+#event_text, #info_text{
+	margin: 10px 40px 1px 20px;
+}
+#event_levo{
+	float: left;
+	width: 20%;
+	margin-right: 2% 
+}
+#event_opis{
+	width: 78%;
+	display: block;
+	float: left;
+	text-decoration: none;
+	color: black;
+}
+#event_opis:visited{
+	color: black;
+}
+#event_opis:hover{
+	cursor: pointer;
+}
+#a_bilten{
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+}
+#a_bilten:visited{
+	color: black;
+}
+#a_bilten:hover{
+	cursor: pointer;
+	text-decoration: underline;
+}
+#new_random{
+    padding: 2px 10px;    
+    color: black;
+    background-color: white;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px black solid;
+}
+#new_random:hover{
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}

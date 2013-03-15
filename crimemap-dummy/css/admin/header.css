@@ -1,0 +1,44 @@
+#logo_h1{
+    float:left;
+    font-family: AlexaScript, Helvetica, Arial, sans-serif;
+    padding: 32px 0 32px 0;
+    margin:0;
+}
+#logo_img{
+    float: left;
+}
+#title_div{
+	font-family: Rakopisen, Helvetica, Arial, sans-serif;
+	font-size: 2em;
+}
+#open_data_logo{
+    float: right;
+}
+#menu{
+    float: left;
+    width: 100%;
+}
+ul{
+    list-style: none;
+}
+#ul_menu {
+    padding: 0;
+    margin: 0;
+}
+#ul_menu li{
+    float:left;
+    padding-right: 12px;
+}
+#ul_menu li a, #odjava a, #najava a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #666666;
+}
+@font-face {
+    font-family: Rakopisen;
+    src: url(../../font/SkolaSerifIt-Regular.otf);
+    font-weight: 400;
+}
+#odjava, #najava{
+    float: right;
+}

@@ -1,0 +1,54 @@
+#content{
+    width: 960px;
+    text-align: center;
+}
+table
+{
+    margin: 20px auto 0 auto;
+    background: #fff;
+    width: 80%;
+    border-collapse: collapse;
+    text-align: center;
+}
+table tr{
+    border-bottom: 1px solid #6678b1;
+}
+table td
+{
+    padding: 3px 0 3px 0;
+}
+#div_dodaj,#div_brishi{
+    background-color: white;
+    width: 470px;
+    margin: 0 auto;    
+}
+#div_dodaj *{
+    padding: 2px;
+}
+#email{
+    float: left;
+    margin-left:7px;
+}
+.dodaj{
+    float: left;
+}
+#password{
+    float: left;
+    margin-left:63px;
+}
+span{
+    float: left;
+}
+tr.select_red{
+    color: royalblue;
+    background-color: darkgray;
+    font-weight: bold;
+}
+tr:hover{
+    color: royalblue;
+    font-weight: bold;
+    cursor: pointer;
+}
+#dialog-brishi{
+    display: none;
+}

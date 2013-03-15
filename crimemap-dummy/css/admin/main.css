@@ -1,0 +1,11 @@
+body{
+    height: 100%;
+    margin:0 auto;
+    width: 960px;
+    background-image: url('../../img/finki_back.jpg');
+    color: #666666;
+    font: 12px/16px Calibri,Arial,Tahoma,Helvetica,sans-serif;
+}
+.clear_both{
+    clear:both;
+}

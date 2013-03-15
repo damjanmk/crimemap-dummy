@@ -1,0 +1,31 @@
+.menu{
+    float: left;
+    margin: 10px;
+    color: #666666;
+    text-decoration: none;
+}
+.menu:visited{
+    color: #666666;
+}
+.lang{
+    float: right;
+    margin-right: 15px;
+}
+#title_div{
+    font-family: Rakopisen, Helvetica, Arial, sans-serif;
+    font-size: 2em;
+    padding: 0.3em 0;
+    margin-left: 5px;
+}
+@font-face {
+    font-family: Rakopisen;
+    src: url(../font/SkolaSerifIt-Regular.otf);
+    font-weight: 400;
+}
+#open_data_logo{
+    float: right;
+    margin-right: 15px;
+}
+.clear{
+    clear:both;
+}

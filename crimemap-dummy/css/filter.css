@@ -1,0 +1,121 @@
+body{
+    height: 100%;
+    margin:0 auto;
+    width: 960px;
+    background-image: url('../img/finki_back.jpg');
+    color: #666666;
+    font: 12px/16px Calibri,Arial,Tahoma,Helvetica,sans-serif;
+}
+#od, #do, #bilten_od, #bilten_do{
+    float: left;
+}
+.gradovi{
+    float: left;
+    padding: 6px 14px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+#gradovi{
+    height: 110px;  
+    padding: 0px 10px 0px 10px;
+}
+#shto{   
+    height: 30px;
+    padding: 0px 10px 0px 10px;
+}
+#datumi{    
+    height: 230px;
+    width: 98%;
+    padding: 0px 10px 0px 10px;
+}
+.middle{
+    background-image: url('../img/inner-type-two-middle-bg.png');
+}
+.top{
+    background-image: url('../img/inner-type-two-top-bg.png');
+    height: 23px;
+}
+.bottom{
+    background-image: url('../img/inner-type-two-bottom-bg.png');
+    height: 23px;
+}
+.shto{
+    float:left;
+    padding: 6px 18px;
+    margin: 3px 30px 0px 0px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+#denovi{
+    height: 30px;
+}
+.denovi{
+    float:left;
+    padding: 6px 13px;
+    margin: 3px 27px 0px 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+#Скопје{
+    font-size: 3em;
+    padding-bottom: 11px;
+}
+#Битола, #Куманово, #Прилеп, #Тетово{
+    font-size: 2.5em;
+}
+#Велес, #Охрид, #Штип, #Гостивар, #Струмица, #Кичево, #Кавадарци, #Кочани{
+    font-size: 2em;
+}
+#Струга, #Радовиш, #Гевгелија, #Дебар, #Крива_Паланка, #Свети_Николе, #Неготино, #Делчево, #Виница{
+    font-size: 1.5em;
+}
+#\31, #\35{
+    font-size: 2em;
+}
+#\30, #\32, #\34{
+    font-size: 1.5em;
+}
+#d7, #d1, #d4{
+    font-size: 2em;
+}
+#d2, #d6{
+    font-size: 1.5em;
+}
+.sel{
+    color: white;
+    background-color: black;
+}
+.hov{
+    cursor: pointer;
+}
+.datum{
+    float: left;
+    margin: 0px 33px;
+}
+.datum_title{
+    float: left;
+    text-align: center;
+    width: 100%;
+}
+.filter{
+    padding: 2px 10px;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px black solid;
+    margin: 10px 0px;
+}
+.filter:hover{
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+#filter_div{
+   text-align: center;
+}
