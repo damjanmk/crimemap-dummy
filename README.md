@@ -15,15 +15,14 @@ Username: dummy
 
 Password: dummy
 
-Please, feel free to get a copy of the code and use and change it locally. After you make some very cool new features and improvements we could merge our branches and I will update the 'production site' (the one on the actual web server. 
+Please, feel free to get a copy of the code and use and change it locally. After you make some very cool new features and improvements we could merge our branches and I will update the 'production site' (the one on the actual web server). 
 In order to be able to use the code on your machine you will have to go through a few steps:
 
 I)
 ===Install local server, mysql and php===
 
-On Windows it is simple to do by installing xampp. 
-It has apache, mysql and php packaged together.
-On Linux you can install Lampp or xampp for linux, or alternatively install all the parts separately. 
+On Windows install XAMPP. It has apache, mysql and php packaged together.
+On Linux you can install XAMPP or LAMP.
 
 II)
 ===Importing a mysqldump with all the data and structure===
