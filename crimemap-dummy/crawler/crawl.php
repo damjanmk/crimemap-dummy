@@ -1,4 +1,5 @@
 <?php
+
 //ini_set('memory_limit', '256M');
 require './class/Logger.php';
 require './class/Nastan.php';
@@ -10,26 +11,12 @@ require './pomoshni/f_geokod.php';
 
 function chitaj($id)
 {
-    $url = "http://www.moi.gov.mk/ShowAnnouncements.aspx?ItemID=" . $id . "&mid=1149&tabId=209&tabindex=0";
+//    $url = "http://www.moi.gov.mk/ShowAnnouncements.aspx?ItemID=" . $id . "&mid=1149&tabId=209&tabindex=0";	
+	$url = "http://www.mvr.gov.mk/dneven-bilten/" . $id;	
     //vo $html ja zema cela sodrzina od $url, @ e za da ne pokazhuva eden notice
     @$html = file_get_contents($url);
     if ($html !== FALSE)
         return $html;
-    else
-        return FALSE;
-}
-
-function e_bilten($html)
-{
-    //Obicno vaka se nasloveni dnevnite bilteni
-    if ((strpos($html, "Извадок од дел од дневните настани") !== FALSE) ||
-            (strpos($html, "Извадок на дел од дневните настани") !== FALSE) ||
-            (strpos($html, "Ивадок на дел од дневните настани") !== FALSE) ||
-            (strpos($html, "Извадок на дел од дневни настани") !== FALSE) ||
-            (strpos($html, "Ивадок на дел од дневни настани") !== FALSE) ||
-            (strpos($html, "Издавок на дел од дневните настани") !== FALSE)
-    )
-        return TRUE;
     else
         return FALSE;
 }
@@ -44,10 +31,11 @@ function e_nastan($tekst)
 
 function main($last_id)
 {
-	echo "NLP Script - Beginning... <br />";
+	echo "NLP Script - Beginning... <br />";	
     $log = new Logger('./log/Log');
-//$id = 11069;
-    for ($id = $last_id; $id < $last_id + 69; $id++)
+//$last_id = 11069;
+//$last_id = 15;
+    for ($id = $last_id; $id < $last_id + 7; $id++)
     {
 		echo ".";
         $html = chitaj($id);
@@ -56,17 +44,10 @@ function main($last_id)
         {
             $log->logWriteNewLine();
             $log->logWrite("!!!!!Грешка при читање од url за id: " . $id . "!!!!!");
+continue;
         }
         else
         {
-            if (!e_bilten($html))
-            {
-                $log->logWriteNewLine();
-                $log->logWrite(" !!!!!Ставката со id: " . $id . " не е билтен. !!!!! ");
-            }
-            else
-            {
-
                 polni_array_grad();
                 polni_array_opshti();
                 polni_array_krivicni_dela();
@@ -79,17 +60,23 @@ function main($last_id)
                 @$dom->loadHTML(mb_convert_encoding($html, 'HTML-ENTITIES', "UTF-8"));
                 $xpath = new DOMXPath($dom);
                 $datum_bilten = NULL;
-                if (($datum_bilten_dom_list = $xpath->query("//span[@id='TitleField']") ) != null)
+//<span id="MainContent_lblNaslov">Извадок на дел од дневните настани 02.07.2015</span>  
+		if (($datum_bilten_dom_list = $xpath->query("//span[@id='MainContent_lblNaslov']") ) != null)
                 {
-                    $datum_bilten = $datum_bilten_dom_list->item(0)->nodeValue;
-                    $datum_bilten = mkd_vo_mysql_datum($datum_bilten);
+                    $cel_naslov = $datum_bilten_dom_list->item(0)->nodeValue;
+		    $zborovi_vo_naslov = split(" ", $cel_naslov);
+		    $broj_na_zborovi = count($zborovi_vo_naslov) - 1;
+		    if( datum($zborovi_vo_naslov[$broj_na_zborovi]) ) 
+	                    $datum_bilten = mkd_vo_mysql_datum($zborovi_vo_naslov[$broj_na_zborovi]);
                 }
-                $paragrafi = $xpath->query("//div[@id='HtmlHolder']/p");
+                $paragrafi = $xpath->query("//div[@id='MainContent_pnlBilten']//p");
+
                 //else $paragrafi = explode( xpath HtmlHolder/font, "<br>)
                 foreach ($paragrafi as $paragraf)
                 {
                     $tekst = trim($paragraf->nodeValue);
                     $tekst = trim($tekst, "\x20\x0d\xc2\xa0\n");
+//echo $tekst;
                     if (!e_nastan($tekst))
                     {
                         continue;
@@ -186,13 +173,12 @@ function main($last_id)
                         $log->logWrite($n->get_nastan());
                         $n->insert_in_db();
                     }
-                }
-            }
+                }            
         }
     }
 	echo "<br />NLP Script - Done";
 }
 
-$id = file_get_contents('./last.txt');
+$id = trim(file_get_contents('./last.txt'));
 main($id);
 ?>
