@@ -103,12 +103,13 @@ function selo_info($selo_plus, &$n)
                 $i = 1;
             }
         }
-        if (mb_strpos($selo, "Горно", null, "UTF-8") !== FALSE ||
-                mb_strpos($selo, "Долно", null, "UTF-8") !== FALSE ||
-                mb_strpos($selo, "Ново", null, "UTF-8") !== FALSE ||
-                mb_strpos($selo, "Старо", null, "UTF-8") !== FALSE ||
-                mb_strpos($selo, "Долна", null, "UTF-8") !== FALSE ||
-                mb_strpos($selo, "Горна", null, "UTF-8") !== FALSE)
+        if (
+                mb_strpos($selo, "Нов", null, "UTF-8") !== FALSE ||
+                mb_strpos($selo, "Стар", null, "UTF-8") !== FALSE ||
+                mb_strpos($selo, "Долн", null, "UTF-8") !== FALSE ||
+                mb_strpos($selo, "Горн", null, "UTF-8") !== FALSE ||
+                mb_strpos($selo, "Мал", null, "UTF-8") !== FALSE ||
+		mb_strpos($selo, "Голем", null, "UTF-8") !== FALSE)
         {
             $selo .= " " . $selo_plus_trim[$i + 1];
         }
@@ -122,19 +123,30 @@ function selo_info($selo_plus, &$n)
 function kraj($u)
 {
     $l = mb_strlen($u, "UTF-8") - 1;
-    if (mb_strpos($u, "“", null, "UTF-8") === $l ||
+    if (
+            mb_strpos($u, "“", null, "UTF-8") === $l ||
+	    mb_strpos($u, "”", null, "UTF-8") === $l ||
             mb_strpos($u, "\"", null, "UTF-8") === $l ||
             mb_strpos($u, "„", null, "UTF-8") === $l)
         return true;
-    if (mb_substr_count($u, "\"", "UTF-8") === 2 ||
-            mb_substr_count($u, "„", "UTF-8") === 2)
+    if (
+            mb_strpos($u, "“", null, "UTF-8") > 3 ||
+	    mb_strpos($u, "”", null, "UTF-8") > 3 ||
+            mb_strpos($u, "\"", null, "UTF-8") > 3 ||
+            mb_strpos($u, "„", null, "UTF-8") > 3)
+        return true;
+    if (
+            mb_strpos($u, "“", null, "UTF-8") === 2 ||
+	    mb_strpos($u, "”", null, "UTF-8") === 2 ||
+            mb_strpos($u, "\"", null, "UTF-8") === 2 ||
+            mb_strpos($u, "„", null, "UTF-8") === 2)
         return true;
     return false;
 }
 
 function ul($zbor)
 {
-    if (mb_strpos($zbor, "ул.", null, "UTF-8") === 0 || mb_strpos($zbor, "бул.", null, "UTF-8") === 0)
+    if (mb_strpos($zbor, "ул.", null, "UTF-8") === 0 || mb_strpos($zbor, "бул.", null, "UTF-8") === 0 || mb_strpos($zbor, "улица", null, "UTF-8") === 0)
         return TRUE;
 }
 
@@ -149,12 +161,15 @@ function ul_info($ul_plus, &$n)
         $ulica .= $u_trim . " ";
         if (kraj($u_trim))
         {
-            $ok = TRUE;
-            break;
+           $ok = TRUE;
+           break;	
         }
     }
-    if ($ok)
+    if ($ok){
+        $navodnici = array("“", "”", "\"", "„");
+        $ulica = str_replace($navodnici, "\"", $ulica);
         $n->set_adresa(trim($ulica));
+    }
     else
     {
         $ulica = "";
@@ -167,8 +182,11 @@ function ul_info($ul_plus, &$n)
                 break;
             }
         }
-        if ($ok)
+        if ($ok){
+            $navodnici = array("“", "”", "\"", "„");
+	    $ulica = str_replace($navodnici, "\"", $ulica);
             $n->set_adresa(trim($ulica, " ,"));
+	}
     }
 }
 
