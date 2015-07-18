@@ -10,9 +10,9 @@
         <div class="top"></div>
         <div class="middle" >                            
             <div class="text">
-                <a href="../model/pdfcv.php" target="_blank" ><?php echo $lang['about-1'][0]; ?></a>(
-                <a href="http://www.facebook.com/damjan.temelkovski?ref=tn_tnmn" target="_blank" ><img alt="facebook icon" src="../img/facebook-icon.gif"></a>,
-                <a href="https://twitter.com/damjantt" target="_blank" ><img alt="twitter icon" src="../img/twitter-icon.png"></a>,
+                <a href="../model/pdfcv.php" target="_blank" ><?php echo $lang['about-1'][0]; ?></a>(<a href="https://uk.linkedin.com/in/damjantemelkovski"><img alt="linkedin icon" src="../img/linkedin-small-logo.png"></a>
+                <a href="http://www.facebook.com/damjan.temelkovski?ref=tn_tnmn" target="_blank" ><img alt="facebook icon" src="../img/facebook-icon.gif"></a>
+                <a href="https://twitter.com/damjantt" target="_blank" ><img alt="twitter icon" src="../img/twitter-icon.png"></a>
                 <a href="https://plus.google.com/105444288316290213908/posts" target="_blank" ><img alt="google plus icon" src="../img/google-plus-icon.png"></a>)
                 <?php echo $lang['about-1'][1]; ?> <a href="http://www.mediafire.com/?oodjlxh47x2rbeb" target="_blank"><?php echo $lang['about-1'][2]; ?></a> <?php echo $lang['about-1'][3]; ?>
                 <a href="http://e-tnc.com/etnc/Members/MilosJovanovikMSc/tabid/76/Default.aspx" target="_blank" ><?php echo $lang['about-1'][4]; ?></a>
@@ -26,7 +26,7 @@
         <div class="middle">
             <div class="text">
                 <?php echo $lang['about-2'][0]; ?>
-                <a href="http://www.mvr.gov.mk/DesktopDefault.aspx?tabindex=0&tabid=209" target="_blank" ><?php echo $lang['about-2'][1]; ?></a>
+                <a href="http://www.mvr.gov.mk/dneven-bilten/91" target="_blank" ><?php echo $lang['about-2'][1]; ?></a>
                 <?php echo $lang['about-2'][2]; ?>
                 <a href="http://maps.google.com" target="_blank" >Google Maps</a>.
                 <br /><br />
