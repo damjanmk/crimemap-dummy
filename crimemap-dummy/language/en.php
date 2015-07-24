@@ -18,9 +18,9 @@ $lang = array(
 		The system consists of two parts: <br />1) analysis of the set of events and updating a database <br />2) showing the data on a map.
 		<br /><br />
 		The data for the events is read automatically from the website of the Ministry of Interior and their
-		<a id='a_bilten' href='http://www.mvr.gov.mk/DesktopDefault.aspx?tabindex=0&tabid=209' target='_blank' >daily e-bulletins</a>.
+		<a id='a_bilten' href='http://www.mvr.gov.mk/dneven-bilten/91' target='_blank' >daily e-bulletins</a>.
 		These events are published in an unstructured form and in a natural language, so the first part of the system analyses every event and writes it in a structured form in a database.
-		Every event is analysed word-for-word until the firs matching with a keyword, so the system can make a wrong inference if a city that is not the one where the crime happened is mentioned first etc.
+		Every event is analysed word-for-word until the first matching with a keyword, so the system can make a wrong inference if a city that is not the one where the crime happened is mentioned first etc.
 		If you notice such an error please report it by clicking on the marker on the map, the data page or by filling the contact form.
 		Also, because of the way the e-bulletins are published, events for entire days can be missed.
 		If you notice an event in the e-bulletins, but not on the map, please report it. 
