@@ -10,5 +10,5 @@
 <div class="bottom"></div>
 
 <div id="damjan">
-&copy; <?php echo date("Y"); ?> <?php echo $lang['damjan']?>
+&copy; Copyright 2012 - <?php echo date("Y"); ?> <?php echo $lang['damjan']?> <a href="../licence/gpl.txt">GNU GPL</a>
 </div>
