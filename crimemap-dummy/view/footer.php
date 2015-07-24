@@ -10,5 +10,5 @@
 <div class="bottom"></div>
 
 <div id="damjan">
-<?php echo $lang['damjan']?>, 2012
+&copy; <?php echo date("Y"); ?> <?php echo $lang['damjan']?>
 </div>
