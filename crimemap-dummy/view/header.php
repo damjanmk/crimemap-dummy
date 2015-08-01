@@ -34,6 +34,23 @@ else
 </div>
 <div class="clear"></div>
 <div >
+    <a class="menu" href="/crimemap/home/<?php if(isset($_GET['l'])) echo $_GET['l']; else echo 'en';?>" id="home"><?php echo $lang['Home']; ?></a>
+    <span class="menu">|</span>
+    <a class="menu" href="/crimemap/all/<?php if(isset($_GET['l'])) echo $_GET['l']; else echo 'en';?>" id="all"><?php echo $lang['All']; ?></a>
+    <span class="menu">|</span>
+    <a class="menu" href="/crimemap/filter/<?php if(isset($_GET['l'])) echo $_GET['l']; else echo 'en';?>" id="filter"><?php echo $lang['Filter']; ?></a>
+    <span class="menu">|</span>
+    <a class="menu" href="/crimemap/data/<?php if(isset($_GET['l'])) echo $_GET['l']; else echo 'en';?>" id="data"><?php echo $lang['Data']; ?></a>
+    <span class="menu">|</span>
+    <a class="menu" href="/crimemap/contact/<?php if(isset($_GET['l'])) echo $_GET['l']; else echo 'en';?>" id="contact"><?php echo $lang['Contact']; ?></a>
+    <span class="menu">|</span>
+    <a class="menu" href="/crimemap/about/<?php if(isset($_GET['l'])) echo $_GET['l']; else echo 'en';?>" id="about"><?php echo $lang['About']; ?></a>
+<?php $current_url = $_SERVER['REQUEST_URI']; $end_of_main = strrpos($current_url, '/') + 1; ?>
+    <a class="menu lang" href="<?php echo substr($current_url, 0, $end_of_main) . 'sq' . substr($current_url, $end_of_main + 2); ?>" id="Albanian">sq</a>
+    <a class="menu lang" href="<?php echo substr($current_url, 0, $end_of_main) . 'en' . substr($current_url, $end_of_main + 2); ?>" id="English">en</a>
+    <a class="menu lang" href="<?php echo substr($current_url, 0, $end_of_main) . 'mk' . substr($current_url, $end_of_main + 2); ?>" id="Macedonian">mk</a>
+</div>
+<!--<div >
     <a class="menu" href="crime_map.php?a=0&doma=1<?php if(isset($_GET['map'])) echo "&map=" . $_GET['map']; if(isset($_GET['l'])) echo "&l=" . $_GET['l']; ?>" id="home"><?php echo $lang['Home']; ?></a>
     <span class="menu">|</span>
     <a class="menu" href="crime_map.php?a=1<?php if(isset($_GET['map'])) echo "&map=" . $_GET['map']; if(isset($_GET['l'])) echo "&l=" . $_GET['l']; ?>" id="all"><?php echo $lang['All']; ?></a>
@@ -49,4 +66,4 @@ else
     <a class="menu lang" href="?l=sq<?php if(isset($_GET['doma'])) echo "&doma=" . $_GET['doma']; if(isset($_GET['map'])) echo "&map=" . $_GET['map']; if(isset($_GET['a'])) echo "&a=" . $_GET['a']; if(isset($_GET['str'])) echo "&str=" . $_GET['str']; if(isset($_GET['sort'])) echo "&sort=" . $_GET['sort']; if(isset($_GET['opis'])) echo "&opis=" . $_GET['opis']; ?>" id="about">sq</a>
     <a class="menu lang" href="?l=en<?php if(isset($_GET['doma'])) echo "&doma=" . $_GET['doma']; if(isset($_GET['map'])) echo "&map=" . $_GET['map']; if(isset($_GET['a'])) echo "&a=" . $_GET['a']; if(isset($_GET['str'])) echo "&str=" . $_GET['str']; if(isset($_GET['sort'])) echo "&sort=" . $_GET['sort']; if(isset($_GET['opis'])) echo "&opis=" . $_GET['opis']; ?>" id="about">en</a>
     <a class="menu lang" href="?l=mk<?php if(isset($_GET['doma'])) echo "&doma=" . $_GET['doma']; if(isset($_GET['map'])) echo "&map=" . $_GET['map']; if(isset($_GET['a'])) echo "&a=" . $_GET['a']; if(isset($_GET['str'])) echo "&str=" . $_GET['str']; if(isset($_GET['sort'])) echo "&sort=" . $_GET['sort']; if(isset($_GET['opis'])) echo "&opis=" . $_GET['opis']; ?>" id="about">mk</a>
-</div>
+</div>-->

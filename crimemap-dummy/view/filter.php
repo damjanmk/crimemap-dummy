@@ -26,7 +26,8 @@
 	<title><?php echo $lang['Crime Map Macedonia'];?></title>
         <div class="clear"></div>
         <div id="container">
-            <form method="POST" action="./crime_map.php?l=<?php echo $_GET['l']; if(isset($_GET['map'])) echo "&map=" . $_GET['map']; if(isset($_GET['str'])) echo "&str=" . $_GET['str']; if(isset($_GET['sort'])) echo "&sort=" . $_GET['sort']; ?>">
+            <!--<form method="POST" action="./crime_map.php?l=<?php echo $_GET['l']; if(isset($_GET['map'])) echo "&map=" . $_GET['map']; if(isset($_GET['str'])) echo "&str=" . $_GET['str']; if(isset($_GET['sort'])) echo "&sort=" . $_GET['sort']; ?>">-->
+<form method="POST" action="/crimemap/filtered/<?php if(isset($_GET['l'])) echo $_GET['l']; else echo 'en'; ?>">
                 <input type="hidden" name="o" id="odHdn"/>
                 <input type="hidden" name="d" id="doHdn"/>
                 <input type="hidden" name="g" id="gradHdn"/>
@@ -115,5 +116,6 @@
                 </div>
             </form>
         </div>
+	<?php require 'footer.php' ?>
     </body>
 </html>

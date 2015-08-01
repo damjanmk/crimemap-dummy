@@ -76,7 +76,7 @@
             echo "<a href='?str=1";
             if($sort)
                 echo "?sort=" . $sort;
-                echo "&l=" . $l;
+                //echo "&l=" . $l;
             echo "'> |<< </a>";
             if ($str == 1)
                 echo "<a class='ne_moze'> < </a>";
@@ -85,7 +85,7 @@
                 echo "<a href='?str=" . ($str - 1);
                 if ($sort)
                     echo "&sort=" . $sort;
-                    echo "&l=" . $l;
+                    //echo "&l=" . $l;
                 echo "'> < </a>";
             }
             if ($str <= 6)
@@ -112,7 +112,7 @@
                     echo "<a href='?str=" . $i;
                     if ($sort)
                         echo "&sort=" . $sort;
-                        echo "&l=" . $l;
+                        //echo "&l=" . $l;
                     echo "'> " . $i . " </a>";
                 }
             }
@@ -122,13 +122,13 @@
                 echo "<a href='?str=" . ($str + 1);
                 if ($sort)
                         echo "&sort=" . $sort;
-                        echo "&l=" . $l;
+                        //echo "&l=" . $l;
                 echo "' > ></a>";
             }
             echo "<a href='?str=" . $str_max;
             if ($sort)
                 echo "&sort=" . $sort;
-                echo "&l=" . $l;
+                //echo "&l=" . $l;
             echo "'> >>| </a>";
             echo "</div></div>";
             ?>
@@ -142,15 +142,15 @@
             </div>            
             <div class="clear"></div>
             <div id="naslovi">
-                <a id="id" href="?str=<?php echo $str; ?>&sort=nastan_id<?php echo "&l=" . $l; ?>">id</a>
-                <a id="tip" href="?str=<?php echo $str; ?>&sort=shto<?php echo "&l=" . $l; ?>"><?php echo $lang['type']; ?></a>
-                <a id="grad" href="?str=<?php echo $str; ?>&sort=grad<?php echo "&l=" . $l; ?>"><?php echo $lang['city']; ?></a>
-                <a id="adresa" href="?str=<?php echo $str; ?>&sort=adresa<?php echo "&l=" . $l; ?>"><?php echo $lang['address']; ?></a>
-                <a id="datum_bilten" href="?str=<?php echo $str; ?>&sort=datum_bilten<?php echo "&l=" . $l; ?>"><?php echo $lang['date(bulletin)']; ?></a>
-                <a id="datum" href="?str=<?php echo $str; ?>&sort=datum<?php echo "&l=" . $l; ?>"><?php echo $lang['date']; ?></a>
-                <a id="lat" href="?str=<?php echo $str; ?>&sort=lat<?php echo "&l=" . $l; ?>"><?php echo $lang['lat']; ?></a>
-                <a id="lng" href="?str=<?php echo $str; ?>&sort=lng<?php echo "&l=" . $l; ?>"><?php echo $lang['lng']; ?></a>
-                <a id="opis" href="?str=<?php echo $str; ?>&sort=opis<?php echo "&l=" . $l; ?>"><?php echo $lang['description']; ?></a>
+                <a id="id" href="?str=<?php echo $str; ?>&sort=nastan_id">id</a>
+                <a id="tip" href="?str=<?php echo $str; ?>&sort=shto"><?php echo $lang['type']; ?></a>
+                <a id="grad" href="?str=<?php echo $str; ?>&sort=grad"><?php echo $lang['city']; ?></a>
+                <a id="adresa" href="?str=<?php echo $str; ?>&sort=adresa"><?php echo $lang['address']; ?></a>
+                <a id="datum_bilten" href="?str=<?php echo $str; ?>&sort=datum_bilten"><?php echo $lang['date(bulletin)']; ?></a>
+                <a id="datum" href="?str=<?php echo $str; ?>&sort=datum"><?php echo $lang['date']; ?></a>
+                <a id="lat" href="?str=<?php echo $str; ?>&sort=lat"><?php echo $lang['lat']; ?></a>
+                <a id="lng" href="?str=<?php echo $str; ?>&sort=lng"><?php echo $lang['lng']; ?></a>
+                <a id="opis" href="?str=<?php echo $str; ?>&sort=opis"><?php echo $lang['description']; ?></a>
             </div>
             <div id="dialog-brishi" title="<?php echo $lang['Last check!']; ?>" >
                 <p><span style="float:left; margin:0 7px 20px 0;" class="ui-icon ui-icon-alert"></span><?php echo $lang['Delete forever?']; ?></p>
@@ -286,7 +286,7 @@
             echo "<a href='?str=1";
             if ($sort)
                 echo "?sort=" . $sort;            
-                echo "&l=" . $l;
+                //echo "&l=" . $l;
             echo "'> |<< </a>";
             if ($str == 1)
                 echo "<a class='ne_moze'> < </a>";
@@ -295,7 +295,7 @@
                 echo "<a href='?str=" . ($str - 1);
                 if ($sort)
                     echo "&sort=" . $sort;                
-                    echo "&l=" . $l;
+                    //echo "&l=" . $l;
                 echo "'> < </a>";
             }
             if ($str <= 6)
@@ -322,7 +322,7 @@
                     echo "<a href='?str=" . $i;
                     if ($sort)
                         echo "&sort=" . $sort;
-                        echo "&l=" . $l;
+                        //echo "&l=" . $l;
                     echo "'> " . $i . " </a>";
                 }
             }
@@ -332,17 +332,18 @@
                 echo "<a href='?str=" . ($str + 1);
                 if ($sort)
                         echo "&sort=" . $sort;
-                        echo "&l=" . $l;
+                        //echo "&l=" . $l;
                 echo "' > ></a>";
             }
             echo "<a href='?str=" . $str_max;
             if ($sort)
                 echo "&sort=" . $sort;
-                echo "&l=" . $l;
+                //echo "&l=" . $l;
             echo "'> >>| </a>";
             echo "</div></div>";			
             ?>
         </div>
         <div class='bottom'></div>
+	<?php require 'footer.php' ?>
     </body>
 </html>

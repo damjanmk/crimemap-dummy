@@ -56,5 +56,6 @@
             </div>
         </div>
         <div class="bottom"></div>
+	<?php require 'footer.php' ?>
     </body>
 </html>

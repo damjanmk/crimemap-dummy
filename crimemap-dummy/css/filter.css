@@ -17,20 +17,20 @@ body{
     border-radius: 10px;
 }
 #gradovi{
-    height: 110px;  
-    padding: 0px 10px 0px 10px;
+    height: 110px;
 }
 #shto{   
     height: 30px;
-    padding: 0px 10px 0px 10px;
 }
 #datumi{    
-    height: 230px;
+    height: 240px;
     width: 98%;
     padding: 0px 10px 0px 10px;
 }
 .middle{
     background-image: url('../img/inner-type-two-middle-bg.png');
+    width: 100%;
+    float: left;
 }
 .top{
     background-image: url('../img/inner-type-two-top-bg.png');
@@ -39,6 +39,8 @@ body{
 .bottom{
     background-image: url('../img/inner-type-two-bottom-bg.png');
     height: 23px;
+    width: 100%;
+    float: left;
 }
 .shto{
     float:left;

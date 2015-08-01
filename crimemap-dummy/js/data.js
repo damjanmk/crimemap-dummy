@@ -83,7 +83,8 @@ $(function(){
             if(vr == '' || vr == ' ')
                 return false;
             else{
-                location.href="?l=" + lang + "&opis=" + vr;
+                //location.href="?l=" + lang + "&opis=" + vr;
+		location.href="?opis=" + vr;
             }
         }
         return false;
@@ -94,7 +95,8 @@ $(function(){
             if(vr == '' || vr == ' ')
                 return false;
             else{
-                location.href="?l=" + lang + "&opis=" + vr;
+                //location.href="?l=" + lang + "&opis=" + vr;
+		location.href="?opis=" + vr;
             }
     });
 	

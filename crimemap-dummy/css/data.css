@@ -249,6 +249,7 @@ body{
 }
 .middle{
     background-image: url('../img/inner-type-two-middle-bg.png');
+    width: 100%;
     float: left;
 }
 .top{
