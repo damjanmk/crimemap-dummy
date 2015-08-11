@@ -1,8 +1,7 @@
 RewriteEngine On
-#RewriteRule ^view/crime_map.php?(.*)$ /home/mk? [L,R=301]
 RewriteRule ^filtered/(en|mk|sq)$ view/crime_map.php?l=$1
-RewriteRule ^home/(en|mk|sq)?(.*)$ view/crime_map.php?l=$1&doma=1
-RewriteRule ^all/(en|mk|sq)$ view/crime_map.php?l=$1&a=1
+RewriteRule ^home/(en|mk|sq)?(.*)$ view/crime_map.php?l=$1&doma=1 [L,QSA]
+RewriteRule ^all/(en|mk|sq)$ view/crime_map.php?l=$1&a=1 [L,QSA]
 RewriteRule ^filter/(en|mk|sq)$ view/filter.php?l=$1
 RewriteRule ^data/(en|mk|sq)?(.*)$ view/data.php?l=$1$2 [L,QSA]
 RewriteRule ^contact/(en|mk|sq)$ view/contact.php?l=$1

@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <script type="text/javascript"
-                src="http://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&sensor=false&libraries=visualization">
+                src="http://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&sensor=false&libraries=visualization">                
         </script>
         <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
         <script type="text/javascript" src="../js/jquery-ui-1.8.22.custom.min.js"></script>
@@ -209,44 +209,9 @@
             </form>
         <?php
         if($marker){
-           if(isset($_GET['a']) && $_GET['a'] == '1')
-            {
-                echo "<div class='marker' id='?a=1&map=heat";
-                if(isset($_GET['l']))
-                    echo "&l=" . $_GET['l'];
-                if(isset($_GET['doma']))
-                    echo "&doma=" . $_GET['doma'];
-                echo "'";
-                echo ">" . $lang['Heat Map'] . "</div>";
-            }
-           else{
-               echo "<div class='marker' id='?a=0&map=heat";
-               if(isset($_GET['l'])) 
-                    echo "&l=" . $_GET['l'];
-               if(isset($_GET['doma']))
-                    echo "&doma=" . $_GET['doma'];
-               echo "'";
-               echo ">" . $lang['Heat Map'] . "</div>";
-           }
+           echo "<div class='marker' id='?map=heat'>" . $lang['Heat Map'] . "</div>";
         }else{
-           if(isset($_GET['a']) && $_GET['a'] == '1'){
-               echo "<div class='marker' id='?a=1&map=marker";
-               if(isset($_GET['l']))
-                    echo "&l=" . $_GET['l'];
-               if(isset($_GET['doma']))
-                    echo "&doma=" . $_GET['doma'];
-               echo "'";
-               echo ">" . $lang['Marker Map'] . "</div>";
-           }
-           else{
-               echo "<div class='marker' id='?a=0&map=marker";
-               if(isset($_GET['l'])) 
-                    echo "&l=" . $_GET['l'];
-               if(isset($_GET['doma']))
-                    echo "&doma=" . $_GET['doma'];
-               echo "'";
-               echo ">" . $lang['Marker Map'] . "</div>";
-           }
+           echo "<div class='marker' id='?'>" . $lang['Marker Map'] . "</div>";
         }
         ?>
         </div>
