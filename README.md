@@ -1,6 +1,9 @@
 crimemap-dummy
 ==============
 
+step by step for local use
+===
+
 dummy of crimemap.finki.ukim.mk
 
 This version contains the part of the project that manipulates and displays data from a database, 

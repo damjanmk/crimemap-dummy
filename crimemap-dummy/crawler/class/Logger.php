@@ -50,6 +50,11 @@ class Logger
         ftruncate($this->handle, 0);
     }
 
+    //Close file	
+    public function logClose(){
+	fclose($this->handle);
+    }
+
 }
 
 ?>
